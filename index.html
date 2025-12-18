@@ -99,59 +99,59 @@
         <!-- Three columns of text below the carousel -->
         <div class="row" style="justify-content:center">
           <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
+            <div  class="card-body">
                 <h5 class="card-title">Asesoramiento Contable</h5>
                 <p class="card-text">Gestión contable integral, incluyendo registros financieros, conciliaciones bancarias y elaboración de informes financieros.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Asesoramiento Contable')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
           <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Asesoramiento Impositivo</h5>
                 <p class="card-text">Asesoramiento y gestión en cumplimiento fiscal, optimización de cargas tributarias y presentación de declaraciones impositivas.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito asesoramiento Impositivo')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
           <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Gestión Laboral</h5>
                 <p class="card-text">Proveemos gestión de nóminas, administración de recursos humanos y asesoramiento en cumplimiento laboral.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Gestión Laboral')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
           <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Asesoramiento Societario</h5>
                 <p class="card-text">Asesoramiento en constitución de sociedades, gestión de estatutos y cumplimiento de obligaciones societarias.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Asesoramiento Societario')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
            <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Precio de Transferencia</h5>
                 <p class="card-text">Ofrecemos análisis y documentación de precios de transferencia para asegurar el cumplimiento de normativas fiscales internacionales.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Precio de Transferencia')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
            <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Software Administrativo Contable (Odoo y Tango)</h5>
                 <p class="card-text">Implementamos Odoo y Tango, softwares administrativo contables, para optimizar la gestión financiera, inventarios, ventas y recursos humanos en su empresa.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Software Administrativo Contable')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
           <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Criptomonedas</h5>
                 <p class="card-text">Asesoramos en operaciones con criptoactivos, su tratamiento contable y fiscal, y la correcta documentación para evitar contingencias. Acompañamos tanto a particulares como a empresas que invierten o cobran en cripto.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Criptomonedas')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
             <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Blanqueo de Capitales</h5>
                 <p class="card-text">Brindamos asesoría en regularización de activos no declarados, análisis impositivo y presentación del régimen correspondiente. Acompañamos todo el proceso garantizando cumplimiento y confidencialidad.</p>
-                <a href="#" class="btn btn-primary">Lo quiero!</a>
+                <a onclick="gowhapp('Necesito Blanqueo de Capitales')" href="#" class="btn btn-primary">Lo quiero!</a>
             </div>
           </div>
         </div><!-- /.row -->
@@ -254,9 +254,19 @@
         <hr class="my-4">
         <p>Consultoría financiera continua y tableros de control</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Lo quiero!</a>
+            <a onclick="gowhapp('Necesito asesoría contable personalizada para tu empresa')" class="btn btn-primary btn-lg" href="#" role="button">Lo quiero!</a>
         </p>
     </div>
+
+   
+    <div style="text-align:center" onclick="gowhapp('¡CONTACTAR AL ESTUDIO!')" class="sticky-bottom-on-scroll bg-white p-3 shadow">
+       <img style="width: 55px;height: 60px;" src="/img/whapp.png" data-src="holder.js/20x20" alt='Thumbnail' class="img-thumbnail img-responsive"/>
+        <label>¡CONTACTAR AL ESTUDIO!</label>
+    </div>
+ 
+
+
+
 
     <footer class="container py-5">
         
@@ -320,6 +330,22 @@
         fg: '#eceeef',
         text: 'Thumbnail'
       });
+
+  
+ function gowhapp(msg=null) {
+  var phone = '+5492644109565'
+  var message = msg
+    try {
+        
+        const encodedMessage = encodeURIComponent(message);
+        const url = `https://wa.me/${phone}?text=${encodedMessage}`;
+        window.open(url, "_blank");
+        // window.location.href = url;
+    } catch (error) {
+        console.error("Error redirecting to WhatsApp:", error);
+        alert("Intenta mas tarde.");
+    }
+}
     </script>
   
 

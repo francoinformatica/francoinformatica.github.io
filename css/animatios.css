@@ -38,3 +38,8 @@
    margin-bottom: 12rem;
    justify-self: center;
  }
+
+.sticky-bottom-on-scroll {
+  position: sticky;
+  bottom: 0;
+}
