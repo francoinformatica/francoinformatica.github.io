@@ -31,4 +31,10 @@
 .animated-card {
     animation: fadeInUp 0.6s ease forwards;
 }
-  
+.carousel {
+   width:100%;
+   max-width: 700px;
+   height:360px;
+   margin-bottom: 12rem;
+   justify-self: center;
+ }
